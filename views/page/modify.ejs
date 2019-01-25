@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- head -->
+<header>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="/bootstrap.css" rel="stylesheet">
+
+  <title>Guestbook</title>
+
+  <!-- Bootstrap core CSS -->
+
+  <% include ../partials/header %>
+</header>
+
+<body class="container">
+  <content>
+
+    <br> <br>
+  <h2 style="text-align:center; color:red;">MODIFY ROOM</h2>
+
+
+  <div class="keskitetty">
+
+    <br>
+    <form method="post" action="/modify">
+      <h3>Choose name from the list</h3>
+      <input type="text" name="name" /> <br /> <br>
+
+      <h3>Add it's new comment</h3>
+      <input type="text" name="comment" /> <br /> <br>
+
+      <input type="submit" value="Modify" />
+    </form>
+    <br>
+
+    <div class="listaus">
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Comment</th>
+            <th>Date</th>
+
+          </tr>
+          <% for(var i = 0; i < data.length; i++) { %>
+          <tr>
+            <td>
+              <%= data[i].name %>
+            </td>
+            <td>
+              <%= data[i].email %>
+            </td>
+            <td>
+              <%= data[i].comment %>
+            </td>
+
+            <td>
+              <%= data[i].date %>
+            </td>
+
+          </tr>
+
+          <% } %>
+        </table> <br>
+
+
+
+
+
+
+
+
+<img src="modify.png" alt="Mario" height="40%" width="30%" />
+</div>
+</div>
+
+  </content>
+
+  <footer>
+    <% include ../partials/footer %>
+  </footer>
+</body>
+
+</html>

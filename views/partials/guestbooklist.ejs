@@ -1,0 +1,38 @@
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" />
+<div class="container">
+  <h2 style="text-align:center; color:red;">The almighty Guestbook itself!</h2>
+  <br />
+  <div class="listaus">
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Comment</th>
+        <th>Date</th>
+
+      </tr>
+      <% for(var i = 0; i < data.length; i++) { %>
+      <tr>
+        <td>
+          <%= data[i].name %>
+        </td>
+        <td>
+          <%= data[i].email %>
+        </td>
+        <td>
+          <%= data[i].comment %>
+        </td>
+
+        <td>
+          <%= data[i].date %>
+        </td>
+
+      </tr>
+
+      <% } %>
+    </table> <br>
+    <div class="keskitetty">
+    <img src="yoshi.png" alt="Mario" height="40%" width="30%" />  
+    </div>
+  </div>
+</div>
